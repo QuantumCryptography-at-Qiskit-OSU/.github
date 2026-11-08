@@ -19,17 +19,22 @@ The notebook walks through the core ideas of quantum cryptography with runnable 
 | Repository | Description |
 |------------|-------------|
 | [`.github`](https://github.com/QuantumCryptography-at-Qiskit-OSU/.github) | Organization profile |
-| `Submission` | The Final submission repository |
+| [`Quantum-Cryptography-Challenge`](https://github.com/QuantumCryptography-at-Qiskit-OSU/Quantum-Cryptography-Challenge) | The original challenge repository, containing the notebook and all required materials |
+| [`Submission`](https://github.com/QuantumCryptography-at-Qiskit-OSU/Submission) | The final submission repository |
+
+## Getting the Materials
+
+Everything needed to work through the challenge is in the `Quantum-Cryptography-Challenge` repository. Start there, and use `Submission` for the final version of the work.
 
 ## Setting Up a Python Environment
 
 These steps create an isolated Python environment and connect it to Jupyter so the notebook runs with the right packages. Python 3.9 or newer is required.
 
-**1. Clone the repository**
+**1. Clone the Challenge repository**
 
 ```bash
-git clone https://github.com/QuantumCryptography-at-Qiskit-OSU/Submission.git
-cd Submission
+git clone https://github.com/QuantumCryptography-at-Qiskit-OSU/Quantum-Cryptography-Challenge.git
+cd Quantum-Cryptography-Challenge
 ```
 
 **2. Create a virtual environment**
@@ -50,6 +55,16 @@ source .venv/bin/activate
 
 **4. Install the dependencies**
 
+If the repository includes a `requirements.txt`, use it:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install jupyter ipykernel
+```
+
+Otherwise, install the core packages directly:
+
 ```bash
 pip install --upgrade pip
 pip install qiskit qiskit-aer matplotlib pylatexenc jupyter ipykernel
@@ -67,7 +82,7 @@ python -m ipykernel install --user --name qiskit-osu --display-name "Python (Qis
 jupyter notebook
 ```
 
-Open the notebook, then choose **Kernel > Change Kernel > Python (Qiskit OSU)**. In JupyterLab, use the kernel name in the top right corner instead. In VS Code, click **Select Kernel** and pick the `.venv` interpreter.
+Open the notebook from the `Quantum-Cryptography-Challenge` folder, then choose **Kernel > Change Kernel > Python (Qiskit OSU)**. In JupyterLab, use the kernel name in the top right corner instead. In VS Code, click **Select Kernel** and pick the `.venv` interpreter.
 
 **7. Verify the setup**
 
